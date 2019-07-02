@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="XFSample20190702.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--  OpenSans Dynamic Resources  -->
+            <OnPlatform
+                x:Key="OpenSansBoldResources"
+                x:TypeArguments="x:String"
+                Android="OpenSans-Bold.ttf#Open Sans"
+                iOS="OpenSans-Bold" />
+            <OnPlatform
+                x:Key="OpenSansRegularResources"
+                x:TypeArguments="x:String"
+                Android="OpenSans-Regular.ttf#Open Sans"
+                iOS="OpenSans-Regular" />
+
+            <!--  Styles  -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontFamily" Value="{DynamicResource OpenSansRegularResources}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontFamily" Value="{DynamicResource OpenSansRegularResources}" />
+                <Setter Property="PlaceholderColor" Value="Gray" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily" Value="{DynamicResource OpenSansRegularResources}" />
+            </Style>
+
+            <Style x:Key="OpenSansBold" TargetType="Label">
+                <Setter Property="FontFamily" Value="{DynamicResource OpenSansBoldResources}" />
+            </Style>
+
+
+            <!--<Style BasedOn="{StaticResource ShellBaseStyle}" TargetType="Shell" />-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

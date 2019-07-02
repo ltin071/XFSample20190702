@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="XFSample20190702.View.DFlyoutHeader"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    HeightRequest="200">
+    <ContentView.Content>
+        <StackLayout Padding="0,10,0,0" BackgroundColor="Black">
+            <custom:CircleImage
+                Aspect="AspectFill"
+                HeightRequest="100"
+                HorizontalOptions="CenterAndExpand"
+                Source="demo_portrait.png"
+                VerticalOptions="Start"
+                WidthRequest="100" />
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Style="{DynamicResource OpenSansBold}"
+                Text="Chan, Tai Man"
+                TextColor="White" />
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Senior Manager"
+                TextColor="White" />
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="Information Technology Services"
+                TextColor="White" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

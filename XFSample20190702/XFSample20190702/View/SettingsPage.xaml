@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<v:DContentPage
+    x:Class="XFSample20190702.View.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:v="clr-namespace:XFSample20190702.View">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label HorizontalOptions="CenterAndExpand" Text="Welcome to Settings Page!" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Display Mode:" VerticalOptions="CenterAndExpand" />
+                <Picker
+                    x:Name="DisplayModePicker"
+                    Title="Display Mode"
+                    SelectedIndexChanged="DisplayModePicker_SelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Both</x:String>
+                            <x:String>Flyout</x:String>
+                            <x:String>Tabbar</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</v:DContentPage>
